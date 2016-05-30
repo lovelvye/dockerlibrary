@@ -5,7 +5,7 @@ RUN apk add --no-cache openssl python
 RUN wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py
 
-RUN pip install -i http://pypi.douban.com/simple/ supervisor \
+RUN pip install supervisor \
     && echo_supervisord_conf > /etc/supervisord.conf
 
 RUN mkdir -p /etc/supervisor.d \
